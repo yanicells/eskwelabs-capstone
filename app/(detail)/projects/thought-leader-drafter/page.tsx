@@ -1,4 +1,4 @@
-import { LinkPlaceholder, Screenshot } from "../../components/Placeholder";
+import { LinkPlaceholder, Screenshot } from "../../../components/Placeholder";
 
 export default function ThoughtLeaderDrafterPage() {
   return (
