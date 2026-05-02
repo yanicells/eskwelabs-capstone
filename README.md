@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yani — Portfolio
 
-## Getting Started
+My Eskwelabs Innovation Fellowship (Cohort 9) capstone portfolio.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other commands:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build   # production build + type check
+pnpm start   # serve the production build
+pnpm lint
+```
 
-## Learn More
+## What's in here
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  page.tsx              home
+  layout.tsx            root layout (Nav, Footer, fonts)
+  globals.css           design system + Tailwind base
+  components/           shared React components
+  (detail)/
+    contact/
+    reflection/
+    projects/
+      slide-deck-generator/
+      thought-leader-drafter/
+content.md              source copy for every page
+AGENTS.md               notes for AI tooling
+SCREENSHOTS.md          screenshot checklist + handoff prompt
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The `(detail)` route group keeps the home page full-bleed while leaving room for a shared layout on the detail pages later.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Where the copy lives
 
-## Deploy on Vercel
+Page text comes from `content.md`. The markdown is the source of truth, but it doesn't auto-load — copy is currently inlined into each page component. If you change the content, update the matching page file too.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The project case studies use placeholder boxes until real screenshots are dropped in. See `SCREENSHOTS.md` for the checklist and a handoff prompt for wiring images up.
+
+## Stack
+
+- Next.js 16 (App Router, Turbopack)
+- React 19
+- TypeScript
+- Tailwind CSS v4 for resets and utilities. The design system itself is hand-written in `globals.css`.
+- Geist + General Sans + JetBrains Mono (Google Fonts + Fontshare)
