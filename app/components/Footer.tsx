@@ -5,13 +5,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div style={{ minWidth: 0 }}>
-          <div
-            className="upcase-mono"
-            style={{ color: "var(--ink-mute)", marginBottom: 14 }}
-          >
-            <span style={{ color: "var(--accent)" }}>●</span>
-            &nbsp;&nbsp;Let&apos;s build something
-          </div>
           <div className="footer-mark">
             Yani<span style={{ color: "var(--accent)" }}>.</span>
           </div>
@@ -23,8 +16,8 @@ export default function Footer() {
               maxWidth: 420,
             }}
           >
-            Edrian Miguel Capistrano — full-stack &amp; AI engineer. Currently
-            2nd-year CS at Ateneo de Manila, going into 3rd this June.
+            Edrian Miguel Capistrano. 2nd-year CS at Ateneo de Manila, going
+            into 3rd this June.
           </div>
         </div>
         <div className="footer-meta" style={{ minWidth: 0 }}>
@@ -56,16 +49,7 @@ export default function Footer() {
             </a>
           </div>
           <div style={{ marginTop: 14, opacity: 0.7 }}>
-            © 2026 — Built during{" "}
-            <strong
-              style={{
-                color: "var(--ink-soft)",
-                letterSpacing: "0.04em",
-              }}
-            >
-              ESKWELABS
-            </strong>{" "}
-            Innovation Fellowship · Cohort 9.
+            © 2026 Edrian Miguel Capistrano · EIF Cohort 9
           </div>
         </div>
       </div>
