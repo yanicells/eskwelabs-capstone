@@ -35,7 +35,6 @@ app/
       thought-leader-drafter/
 content.md              source copy for every page
 AGENTS.md               notes for AI tooling
-SCREENSHOTS.md          screenshot checklist + handoff prompt
 ```
 
 The `(detail)` route group keeps the home page full-bleed while leaving room for a shared layout on the detail pages later.
@@ -43,10 +42,6 @@ The `(detail)` route group keeps the home page full-bleed while leaving room for
 ## Where the copy lives
 
 Page text comes from `content.md`. The markdown is the source of truth, but it doesn't auto-load — copy is currently inlined into each page component. If you change the content, update the matching page file too.
-
-## Screenshots
-
-The project case studies use placeholder boxes until real screenshots are dropped in. See `SCREENSHOTS.md` for the checklist and a handoff prompt for wiring images up.
 
 ## Stack
 
