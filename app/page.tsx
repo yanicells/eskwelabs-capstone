@@ -264,6 +264,8 @@ export default function Home() {
                 "LangChain",
               ]}
               ph="01  Pipeline UI"
+              image="/projects/tld-screen.png"
+              alt="Thought Leader Drafter preview"
               to="/projects/thought-leader-drafter"
             />
             <ProjectCard
@@ -278,6 +280,8 @@ export default function Home() {
                 "Supabase",
               ]}
               ph="02  Generation dashboard"
+              image="/projects/slides-gen-home-screen.png"
+              alt="Slide Deck Generator preview"
               to="/projects/slide-deck-generator"
             />
           </div>

@@ -28,13 +28,32 @@ export default function ThoughtLeaderDrafterPage() {
         role="AI Solution Dev"
         year="2026 · Phase 2"
         status="Stakeholder gated"
+        links={[
+          {
+            href: "https://esk-tl-drafter-web.vercel.app",
+            label: "Live app",
+            icon: "live",
+          },
+          {
+            href: "https://github.com/lancedamalerio03/esk-tl-drafter-web/",
+            label: "GitHub",
+            icon: "github",
+          },
+          {
+            href: "https://drive.google.com/file/d/1xz1TUKlXoN0JQCLbgFUBPlGjRD8nw7Ep/view?usp=sharing",
+            label: "Presentation",
+            icon: "presentation",
+          },
+        ]}
       />
 
       <section style={{ padding: "0 0 60px" }}>
         <div className="container wide">
           <FeatureScreenshot
-            url="thought-drafter.../session/abc-123"
-            label="REPLACE WITH HERO SCREENSHOT — ideally the 4-stage pipeline UI or an A/B comparison view"
+            url="esk-tl-drafter-web.vercel.app"
+            label="Thought Leader Drafter — home"
+            src="/projects/tld-home-screen.png"
+            alt="Thought Leader Drafter home dashboard"
             ratio="16/9"
           />
         </div>
@@ -98,14 +117,18 @@ export default function ThoughtLeaderDrafterPage() {
         <div className="container wide">
           <div className="grid-2" style={{ gap: 28 }}>
             <FeatureScreenshot
-              url="thought-drafter.../session/abc/compare"
-              label="REPLACE WITH SCREENSHOT — A/B comparison mode"
-              caption="Fig. 1 — A/B comparison mode"
+              url="esk-tl-drafter-web.vercel.app/session"
+              label="4-stage writing pipeline"
+              src="/projects/tld-pipeline-page.png"
+              alt="The 4-stage writing pipeline UI"
+              caption="Fig. 1 — Writing pipeline"
             />
             <FeatureScreenshot
-              url="thought-drafter.../samples"
-              label="REPLACE WITH SCREENSHOT — writing samples library"
-              caption="Fig. 2 — Writing samples library"
+              url="esk-tl-drafter-web.vercel.app/session/output"
+              label="Final draft output"
+              src="/projects/tld-output-page.png"
+              alt="Final draft output with A/B variants"
+              caption="Fig. 2 — Draft output"
             />
           </div>
         </div>
@@ -201,25 +224,6 @@ export default function ThoughtLeaderDrafterPage() {
           with structured outputs, Supabase schema design and live data
           migration, UI/UX implementation with Tailwind and shadcn.
         </p>
-      </ProjectSection>
-
-      <ProjectSection num="06" label="Deliverables" anchor="deliverables">
-        <ul>
-          <li>
-            <strong>GitHub:</strong> [ADD LINK HERE — repo URL]
-          </li>
-          <li>
-            <strong>Deployed app:</strong> [ADD LINK HERE — Vercel link, gated
-            for stakeholders]
-          </li>
-          <li>
-            <strong>PRD:</strong> [ADD LINK HERE if shareable]
-          </li>
-          <li>
-            <strong>Screenshots:</strong> pipeline, A/B mode, samples library,
-            dashboard (see above).
-          </li>
-        </ul>
       </ProjectSection>
 
       <NextProject

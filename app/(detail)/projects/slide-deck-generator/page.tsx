@@ -10,12 +10,7 @@ export default function SlideDeckGeneratorPage() {
     <>
       <ProjectHero
         num="Project 02"
-        name={
-          <>
-            Instructor Sprint <br />
-            Lecture Materials Generator
-          </>
-        }
+        name="Instructor Lecture Materials Generator"
         oneLine="Turns Eskwelabs Class PRDs into ready-to-use Google Slides decks with speaker notes."
         stack={[
           "Next.js 14",
@@ -32,13 +27,27 @@ export default function SlideDeckGeneratorPage() {
         role="AI Solution Dev"
         year="2026 · v1.1"
         status="Internal"
+        links={[
+          {
+            href: "https://eskwelabs-instructor-slides.vercel.app",
+            label: "Live app",
+            icon: "live",
+          },
+          {
+            href: "https://github.com/aremis9/esk-lecture-materials-gen/",
+            label: "GitHub",
+            icon: "github",
+          },
+        ]}
       />
 
       <section style={{ padding: "0 0 60px" }}>
         <div className="container wide">
           <FeatureScreenshot
-            url="deck-gen.eskwelabs.internal/dashboard"
-            label="REPLACE WITH HERO SCREENSHOT — ideally the dashboard or a generated deck"
+            url="eskwelabs-instructor-slides.vercel.app"
+            label="Slide deck generator — main dashboard"
+            src="/projects/slides-gen-page.png"
+            alt="Slide deck generator main dashboard"
             ratio="16/9"
           />
         </div>
@@ -107,14 +116,18 @@ export default function SlideDeckGeneratorPage() {
         <div className="container wide">
           <div className="grid-2" style={{ gap: 28 }}>
             <FeatureScreenshot
-              url="deck-gen.../generation/run"
-              label="REPLACE WITH SCREENSHOT — pipeline diagram or generation in progress UI"
-              caption="Fig. 1 — Pipeline / generation UI"
+              url="eskwelabs-instructor-slides.vercel.app/history"
+              label="Generation history"
+              src="/projects/slides-gen-history-page.png"
+              alt="Generation history and past runs"
+              caption="Fig. 1 — Generation history"
             />
             <FeatureScreenshot
-              url="docs.google.com/presentation/d/_____"
-              label="REPLACE WITH SCREENSHOT — sample generated deck"
-              caption="Fig. 2 — Sample generated deck"
+              url="eskwelabs-instructor-slides.vercel.app/notes"
+              label="Speaker notes view"
+              src="/projects/slides-gen-notes-page.png"
+              alt="Speaker notes editing and preview"
+              caption="Fig. 2 — Speaker notes"
             />
           </div>
         </div>
@@ -202,27 +215,6 @@ export default function SlideDeckGeneratorPage() {
           integration, Pydantic validation, async pipeline design, AI quality
           assurance.
         </p>
-      </ProjectSection>
-
-      <ProjectSection num="07" label="Deliverables" anchor="deliverables">
-        <ul>
-          <li>
-            <strong>GitHub:</strong> [ADD LINK HERE — repo:
-            github.com/aremis9/esk-lecture-materials-gen]
-          </li>
-          <li>
-            <strong>Deployed app:</strong> [ADD LINK HERE if accessible,
-            otherwise note: &ldquo;Internal Eskwelabs tool&rdquo;]
-          </li>
-          <li>
-            <strong>Demo deck / sample output:</strong> [ADD LINK HERE — a
-            generated slides link, if shareable]
-          </li>
-          <li>
-            <strong>Screenshots:</strong> dashboard, generation flow, sample
-            deck (see above).
-          </li>
-        </ul>
       </ProjectSection>
 
       <NextProject
