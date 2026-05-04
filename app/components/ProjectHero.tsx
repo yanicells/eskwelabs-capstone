@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import ProjectLinks, { ProjectLink } from "./ProjectLinks";
 
 type ProjectHeroProps = {
   num: string;
@@ -8,6 +9,7 @@ type ProjectHeroProps = {
   role: string;
   year: string;
   status: string;
+  links?: ProjectLink[];
 };
 
 export default function ProjectHero({
@@ -18,6 +20,7 @@ export default function ProjectHero({
   role,
   year,
   status,
+  links,
 }: ProjectHeroProps) {
   const facts = [
     { k: "Role", v: role },
@@ -97,6 +100,12 @@ export default function ProjectHero({
             </span>
           ))}
         </div>
+
+        {links && links.length > 0 && (
+          <div style={{ marginTop: 32 }}>
+            <ProjectLinks links={links} />
+          </div>
+        )}
       </div>
     </header>
   );

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type ProjectCardProps = {
@@ -7,6 +8,8 @@ type ProjectCardProps = {
   stack: string[];
   ph: string;
   to: string;
+  image?: string;
+  alt?: string;
 };
 
 export default function ProjectCard({
@@ -16,20 +19,32 @@ export default function ProjectCard({
   stack,
   ph,
   to,
+  image,
+  alt,
 }: ProjectCardProps) {
   return (
     <Link href={to} className="proj-card" style={{ textDecoration: "none" }}>
-      <div style={{ aspectRatio: "16/10" }}>
-        <div
-          className="ph"
-          style={{
-            height: "100%",
-            border: "none",
-            borderRadius: 0,
-          }}
-        >
-          <span className="ph-label">{ph}</span>
-        </div>
+      <div style={{ aspectRatio: "16/10", position: "relative" }}>
+        {image ? (
+          <Image
+            src={image}
+            alt={alt ?? ph}
+            fill
+            sizes="(max-width: 880px) 100vw, 580px"
+            style={{ objectFit: "cover" }}
+          />
+        ) : (
+          <div
+            className="ph"
+            style={{
+              height: "100%",
+              border: "none",
+              borderRadius: 0,
+            }}
+          >
+            <span className="ph-label">{ph}</span>
+          </div>
+        )}
       </div>
       <div className="proj-card-body">
         <div className="proj-num">{num}</div>
