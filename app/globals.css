@@ -448,6 +448,62 @@ p:last-child { margin-bottom: 0; }
   gap: 6px;
 }
 
+/* ----- Project links (case-study header row) ----- */
+.proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-card);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+.proj-link:hover {
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px -14px rgba(20,40,40,0.25);
+}
+.proj-link-icon {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--ink);
+  border: 1px solid var(--line-soft);
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.proj-link:hover .proj-link-icon {
+  background: var(--accent);
+  color: var(--bg-card);
+  border-color: var(--accent);
+}
+.proj-link-label { line-height: 1; }
+.proj-link-arrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  transition: transform 160ms ease, color 160ms ease;
+}
+.proj-link:hover .proj-link-arrow {
+  color: var(--accent-ink);
+  transform: translate(2px, -2px);
+}
+
 /* ----- Animations ----- */
 .page-enter { animation: pageIn 480ms cubic-bezier(0.2, 0.6, 0.2, 1) both; }
 @keyframes pageIn {
